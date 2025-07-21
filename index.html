@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Pangilinan | Portfolio</title>
+    <link rel="icon" type="image/png" href="Images/kit.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      .line {
+        width: 24px;
+        height: 2px;
+        background-color: black;
+        transition: all 0.3s ease;
+      }
+      .open .line1 {
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+      .open .line2 {
+        opacity: 0;
+      }
+      .open .line3 {
+        transform: rotate(-45deg) translate(4.5px, -4.5px);
+      }
+    </style>
+</head>
+<body class="text-gray-800 scroll-smooth">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center bg-white sticky top-0 py-3 px-10" style="background-color: #F2ECE8;">
+        <h1 class="text-xl">
+          <span class="font-bold">Chris Pangilinan</span> <span class="font-normal">/ Portfolio</span>
+        </h1> 
+        <ul class="hidden md:flex gap-6">
+            <li>
+                <a href="#home" class="relative group text-gray-800 hover:text-[#1D347A] transition-colors duration-300">
+                Home
+                <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#1D347A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </a>
+            </li>
+            <li>
+               <a href="#about" class="relative group text-gray-800 hover:text-[#1D347A] transition-colors duration-300">
+                About
+               <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#1D347A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              </a>
+           </li>
+          <li>
+            <a href="#project" class="relative group text-gray-800 hover:text-[#1D347A] transition-colors duration-300">
+              Projects
+              <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#1D347A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="relative group text-gray-800 hover:text-[#1D347A] transition-colors duration-300">
+              Contact
+              <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-[#1D347A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            </a>
+          </li>
+        </ul>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white shadow-md rounded-md flex flex-col backdrop-blur-md bg-white/30 border border-white/20 rounded-lg shadow-lg p-4">
+            <a href="#about" class="hover:text-blue-500">About</a>
+            <a href="#project" class="hover:text-blue-500">Projects</a>
+            <a href="#contact" class="hover:text-blue-500">Contact</a>
+        </div>
+        <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center space-y-1">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="grid md:grid-cols-2 items-center justify-center h-screen text-center text-white px-20" style="background-color: #C7B7B3;">
+        <div>
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 font-[Poppins]">Hi! I am Chris Pangilinan </h2>
+            <p class="text-lg md:text-2xl mb-6">Web Developer na pagod na sa buhay na gusto nalang yumaman</p>
+            <a href="#project" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">View My Work</a>
+        </div>
+        <div>
+            <img src="Images/kit.png" alt="Chris Pangilinan" class="w-40 h-40 rounded-full mx-auto" />
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-4xl mx-auto py-16 px-4 grid md:grid-cols-3 gap-8">
+        <div>
+            <h3 class="text-3xl font-bold mb-4">About Me</h3>
+            <p class="text-lg leading-relaxed">
+                I'm Chris Pangilinan, passionate about building user-friendly web experiences. Currently learning full-stack development and enhancing my design skills.
+            </p>
+        </div>
+        <p>HELLO WORLD</p>
+        <p>CHRIS PANGILINAN</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="project" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h3 class="text-3xl font-bold mb-10 text-center">My Projects</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example Project Card -->
+                <div class="bg-white rounded-xl shadow p-6 hover:scale-105 transition">
+                    <h4 class="text-xl font-bold mb-2">Job Marketplace Website</h4>
+                    <p class="mb-4">Laravel-based platform connecting students with employers in Bataan.</p>
+                    <a href="#" class="text-blue-500 font-semibold">View Project →</a>
+                </div>
+                <div class="bg-white rounded-xl shadow p-6 hover:scale-105 transition">
+                    <h4 class="text-xl font-bold mb-2">Dentistry Management System</h4>
+                    <p class="mb-4">System for dental clinics with community forum, built with modern web tools.</p>
+                    <a href="#" class="text-blue-500 font-semibold">View Project →</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-4xl mx-auto py-16 px-4">
+        <h3 class="text-3xl font-bold mb-4">Get In Touch</h3>
+        <p class="mb-6">Let's connect! Feel free to reach out via email or social platforms.</p>
+        <a href="mailto:your.email@example.com" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-gray-500">
+        © 2025 Chris Pangilinan. All rights reserved.
+    </footer>
+
+    <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.classList.toggle('open');
+  });
+</script>
+</body>
+</html>
