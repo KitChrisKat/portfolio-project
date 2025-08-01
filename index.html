@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chris Pangilinan | Portfolio</title>
     <link rel="icon" type="image/png" href="Images/kit.png" ref="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="typing-effect.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="text-gray-800 scroll-smooth">
     <!-- Navbar -->
-    <nav class="flex justify-between items-center bg-white sticky top-0 py-3 px-10" style="background-color: #F2ECE8;">
+    <nav class="flex justify-between py-3 px-4 md:px-10" style="background-color: #F2ECE8;">
         <h1 class="text-xl">
           <span class="font-extrabold">Chris Pangilinan</span> 
           <span class="font-light">/ Portfolio</span>
-        </h1> 
+        </h1>
         <ul class="hidden md:flex items-center text-gray-800 text-sm font-medium space-x-4">
           <li>
              <a href="#home" class="relative group hover:text-[#1D347A] transition-colors duration-300">Home
@@ -45,11 +48,15 @@
           </li>
         </ul>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white shadow-md rounded-md flex flex-col backdrop-blur-md bg-white/30 border border-white/20 rounded-lg shadow-lg p-4">
-            <a href="#about" class="hover:text-blue-500">About</a>
-            <a href="#project" class="hover:text-blue-500">Projects</a>
-            <a href="#contact" class="hover:text-blue-500">Contact</a>
-        </div>
+     <div id="mobile-menu"
+     class="hidden fixed inset-0 bg-white dark:bg-gray-900 p-10 space-y-6 text-lg font-semibold text-gray-800 dark:text-white transform -translate-y-5 opacity-0 transition-all duration-300 ease-out z-50">
+     <button id="close-menu" class="absolute top-6 right-6 text-3xl text-gray-800 dark:text-white hover:text-red-500 focus:outline-none">
+  &times;
+</button>
+ <a href="#about" class="mobile-link block px-4 py-2 ...">About</a>
+<a href="#project" class="mobile-link block px-4 py-2 ...">Projects</a>
+<a href="#contact" class="mobile-link block px-4 py-2 ...">Contact</a>
+</div>
         <button id="menu-btn" class="md:hidden flex flex-col justify-center items-center space-y-1">
             <div class="line line1"></div>
             <div class="line line2"></div>
@@ -57,63 +64,21 @@
         </button>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="grid md:grid-cols-2 items-center justify-center h-screen text-center text-white px-20" style="background-color: #C7B7B3;">
-        <div>
-            <h2 class="text-4xl md:text-6xl font-bold mb-4 font-[Poppins]">Hi! My name is Chris Pangilinan and Welcome to my Portfolio</h2>
-            <p class="text-lg md:text-2xl mb-6">An aspiring web developer/ Web designer</p>
-            <a href="#project" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">View My Work</a>
-        </div>
-        <div>
-            <img src="Images/kit.png" alt="Chris Pangilinan" class="w-40 h-40 rounded-full mx-auto" />
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="max-w-4xl mx-auto py-16 px-4 grid md:grid-cols-3 gap-8">
-        <div>
-            <h3 class="text-3xl font-bold mb-4">About Me</h3>
-            <p class="text-lg leading-relaxed">
-                passionate about building user-friendly web experiences. Currently learning full-stack development and enhancing my design skills.
-            </p>
-        </div>
-        <p>HELLO WORLD</p>
-        <p>CHRIS PANGILINAN</p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="project" class="bg-gray-100 py-16 px-4">
-        <div class="max-w-5xl mx-auto">
-            <h3 class="text-3xl font-bold mb-10 text-center">My Projects</h3>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Example Project Card -->
-                <div class="bg-white rounded-xl shadow p-6 hover:scale-105 transition">
-                    <h4 class="text-xl font-bold mb-2">Job Marketplace Website</h4>
-                    <p class="mb-4">Laravel-based platform connecting students with employers in Bataan.</p>
-                    <a href="#" class="text-blue-500 font-semibold">View Project →</a>
-                </div>
-                <div class="bg-white rounded-xl shadow p-6 hover:scale-105 transition">
-                    <h4 class="text-xl font-bold mb-2">Dentistry Management System</h4>
-                    <p class="mb-4">System for dental clinics with community forum, built with modern web tools.</p>
-                    <a href="#" class="text-blue-500 font-semibold">View Project →</a>
-                </div>
-                <!-- Add more project cards as needed -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="mx-auto py-16 px-20 text-white" style="background-color: #1D347A">
-        <h3 class="text-3xl font-bold mb-4">Get In Touch</h3>
-        <p class="mb-6">
-          I’m always open to new opportunities, collaborations, or just a friendly chat about web development and design!  
-          Whether you have a question, want to work together, or simply want to say hello, feel free to reach out via email or connect with me on social media.
-        </p>
-       
-          <div class="flex gap-6 animate-bounce">
-             <a href="mailto:east.chrispangilinan@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Email Me</a>
-  <!-- Facebook -->
-  <a href="https://facebook.com/SaltySallad23" target="_blank" aria-label="Facebook" class="text-white hover:text-[#1877F2] transition">
+<!-- Hero Section -->
+<section id="home" class="text-white dark:text-white bg-[#C7B7B3] dark:bg-[#1D347A] py-10 min-h-screen flex items-center">
+  <div class="mx-6 sm:mx-10 lg:mx-auto max-w-full sm:max-w-screen-md md:max-w-[1011px] grid grid-cols-4 sm:grid-cols-12 gap-x-5 sm:gap-x-5 md:gap-x-[21px] items-center">
+    <div class="col-span-4 sm:col-span-7 space-y-6">
+      <h2 class="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[90px] leading-none font-bold font-playfair text-left">
+        <span id="line1"></span>
+      </h2>
+      <h2 class="text-[48px] sm:text-[64px] md:text-[80px] lg:text-[90px] leading-none font-bold font-playfair text-left">
+        <span id="line2"></span>
+      </h2>
+      <p class="text-lg md:text-2xl text-left">
+        My passion is creating fast, accessible, and user-friendly websites — with clean code and great design.
+      </p>
+      <div class="flex gap-6" daata-aos="fade-up">
+        <a href="https://facebook.com/SaltySallad23" target="_blank" aria-label="Facebook" class="text-white hover:text-[#1877F2] transition">
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-12 h-12" viewBox="0 0 24 24">
       <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12"/>
     </svg>
@@ -130,21 +95,270 @@
       <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.919.678 1.852 0 1.336-.012 2.417-.012 2.747 0 .267.18.579.688.481C19.138 20.203 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/>
     </svg>
   </a>
-</div>
+      </div>
+    </div>
+    <div class="col-span-4 sm:col-span-5 flex justify-center items-center">
+      <img src="Images/kit.png" alt="Chris Pangilinan" class="w-72 sm:w-80 md:w-96 lg:w-[28rem] object-contain mx-auto mt-8 sm:mt-0" data-aos="fade-left"/>
+    </div>
+  </div>
 </section>
 
-    <!-- Footer -->
-  <footer class="text-center py-6 text-white bg-black">
-   Made by Chris &copy; 2025
+<!-- About Section -->
+<section id="about" class="py-16 dark:bg-gray-800 bg-white text-gray-800">
+  <div class="text-center mb-10">
+    <p class="text-lg ">Introduction</p>
+    <h2 class="text-3xl mt-4 font-bold font-playfair">ABOUT ME</h2>
+  </div>
+  <div class="mx-6 sm:mx-10 lg:mx-auto max-w-full sm:max-w-screen-md md:max-w-[1011px] grid grid-cols-4 sm:grid-cols-12 gap-x-5 sm:gap-x-5 md:gap-x-[21px] items-center">
+    <div class="col-span-5 sm:col-span-4 flex justify-center">
+      <img src="Images/gradpic.jpeg" alt="Chris Pangilinan" class="w-60 h-75 sm:w-72 sm:h-100 object-cover rounded-xl shadow-lg" data-aos="fade-right"/>
+    </div>
+    <div class="col-span-5 sm:col-span-8 space-y-5 mt-5">
+      <p class="text-lg leading-relaxed">
+        I'm Chris Pangilinan, passionate about crafting modern, responsive, and user-centered web experiences. I enjoy solving problems through clean code and thoughtful design.
+      </p>
+      <p class="text-lg leading-relaxed">
+        Currently, I'm diving deep into full-stack development and continuously enhancing my design sensibilities. Whether it's front-end interfaces or back-end logic, I find joy in creating seamless digital journeys.
+      </p>
+          <!-- Info Cards Section -->
+<!-- Info Cards Section -->
+<div class="mt-12 mx-6 sm:mx-10 lg:mx-auto max-w-full sm:max-w-screen-md md:max-w-[1011px] grid grid-cols-1 sm:grid-cols-2 gap-6" data-aos="fade-up">
+  <!-- Education -->
+  <div class="p-4 rounded-xl shadow-md text-left bg-[#F2ECE8]">
+    <div class="text-2xl mb-2">🎓</div>
+    <h4 class="text-lg font-bold mb-1">Education</h4>
+    <p class="text-sm text-gray-600 text-[#1D347A]">BSIT in Eastwoods Professional College of Science and Technology</p>
+  </div>
+
+  <!-- Soft Skills -->
+  <div class="p-4 rounded-xl shadow-md text-left bg-[#F2ECE8]">
+    <div class="text-2xl mb-2">💡</div>
+    <h4 class="text-lg font-bold mb-1">Soft Skills</h4>
+    <p class="text-sm text-gray-600 text-[#1D347A]">Problem-solving, Teamwork, Adaptability</p>
+  </div>
+</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="project" class="bg-gray-100 py-16">
+  <div class="mx-6 sm:mx-10 lg:mx-auto max-w-full sm:max-w-screen-md md:max-w-[1011px]">
+    <h3 class="text-3xl font-bold mb-10 text-center">My Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-bold mb-2">Job Marketplace Website</h4>
+        <p class="mb-4">Laravel-based platform connecting students with employers in Bataan.</p>
+        <a href="#" class="text-blue-500 font-semibold">View Project →</a>
+      </div>
+      <div class="bg-white rounded-xl shadow p-6 hover:scale-105 transition">
+        <h4 class="text-xl font-bold mb-2">Dentistry Management System</h4>
+        <p class="mb-4">System for dental clinics with community forum, built with modern web tools.</p>
+        <a href="#" class="text-blue-500 font-semibold">View Project →</a>
+      </div>
+    </div>
+  </div>
+  
+</section>
+<section id="techstack" class="py-16 bg-white dark:bg-gray-800 text-gray-800 dark:text-white">
+  <div class="text-center mb-10">
+    <p class="text-lg">Tech I Use</p>
+    <h2 class="text-3xl mt-4 font-bold font-playfair">MY TECH STACK</h2>
+  </div>
+
+  <div class="mx-6 sm:mx-10 lg:mx-auto max-w-full sm:max-w-screen-md md:max-w-[1011px] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center" data-aos="fade-up">
+    <!-- Tech Card -->
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 h-12 mx-auto mb-2" alt="HTML5"/>
+      <p class="text-sm font-semibold">HTML5</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 h-12 mx-auto mb-2" alt="CSS3"/>
+      <p class="text-sm font-semibold">CSS3</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 h-12 mx-auto mb-2" alt="JavaScript"/>
+      <p class="text-sm font-semibold">JavaScript</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" class="w-12 h-12 mx-auto mb-2" />
+      <p class="text-sm font-semibold">Tailwind CSS</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-12 h-12 mx-auto mb-2" alt="PHP"/>
+      <p class="text-sm font-semibold">PHP</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://www.vectorlogo.zone/logos/laravel/laravel-icon.svg" alt="Laravel" class="w-12 h-12 mx-auto mb-2" />
+      <p class="text-sm font-semibold">Laravel</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-12 h-12 mx-auto mb-2" alt="MySQL"/>
+      <p class="text-sm font-semibold">MySQL</p>
+    </div>
+    <div class="p-4 bg-[#F2ECE8] rounded-xl shadow-md hover:scale-105 transition-transform">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 h-12 mx-auto mb-2" alt="Git"/>
+      <p class="text-sm font-semibold">Git</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="py-16 text-white dark:text-white" style="background-color: #7382AD;">
+  <div class="mx-6 sm:mx-10 md:mx-10 lg:mx-auto max-w-full sm:max-w-screen-md md:max-w-[1011px] flex flex-col md:grid md:grid-cols-12 gap-6">
+    <div class="col-span-4 sm:col-span-6 justify-center bg-white dark:bg-[#1D347A] p-6 rounded-xl shadow-md text-black dark:text-white border-black">
+    <div class="col-span-4 sm:col-span-12">
+      <h3 class="text-3xl font-bold mb-4">Let's Talk</h3>
+      <p class="mb-6">
+        I’m always open to new opportunities, collaborations, or just a friendly chat about web development and design!
+        Whether you have a question, want to work together, or simply want to say hello, feel free to reach out.
+      </p>
+    </div>
+
+      <!-- Right Column: Contact Info with Icons -->
+<div class="col-span-4 sm:col-span-12 md:col-span-5 w-full sm:w-auto flex flex-col justify-center bg-white dark:bg-[#1D347A] p-6 rounded-xl shadow-md text-black dark:text-white space-y-6 text-left sm:text-center" style="background-color: #F2ECE8;">
+
+  <!-- Email -->
+  <div class="flex items-center space-x-3">
+    <svg class="w-6 h-6 text-blue-600 dark:text-white" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+    </svg>
+    <span class="flex items-start sm:items-center space-x-3 break-words">east.chrispangilinan@gmail.com</span>
+  </div>
+
+ <!-- Phone (Contacts Logo) -->
+<div class="flex items-center space-x-3">
+  <svg class="w-6 h-6 text-blue-600 dark:text-white" fill="none" stroke="currentColor" stroke-width="2"
+       viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M16 7a4 4 0 11-8 0 4 4 0 018 0z" />
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 14c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z" />
+  </svg>
+  <span>+63 999 90# ####</span>
+</div>
+
+  <!-- Location (House Icon) -->
+<div class="flex items-center space-x-3">
+  <svg class="w-6 h-6 text-blue-600 dark:text-white" fill="none" stroke="currentColor" stroke-width="2"
+       viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-4H9v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10z"/>
+  </svg>
+  <span>Orani, Bataan Philippines</span>
+</div>
+</div>
+    </div>
+  
+    <!-- Contact Form (Left) -->
+    <div class="col-span-4 sm:col-span-6">
+      <form action="https://formsubmit.co/east.chrispangilinan@gmail.com" method="POST"
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white dark:bg-[#1D347A] p-6 rounded-xl shadow-md text-black dark:text-white">
+
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="box">
+  <input type="hidden" name="_next" value="https://yourdomain.com/thankyou.html">
+
+  <!-- Left Column -->
+  <input type="text" name="name" placeholder="Enter your name" required
+         class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+  <textarea name="message" placeholder="Enter a message" required
+            class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 md:row-span-3 resize-none"></textarea>
+
+  <input type="email" name="email" placeholder="Enter email address" required
+         class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+  <input type="text" name="subject" placeholder="Enter your subject (Optional)"
+         class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+  <!-- Submit Button -->
+  <div class="md:col-span-2 flex justify-end">
+    <button type="submit"
+            class="bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 transition">
+      Send Message
+    </button>
+  </div>
+</form>
+    </div>  
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-6 text-white bg-black">
+  Chris Pangilinan &copy; 2025
 </footer>
 
-    <script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+<script>
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-menu');
 
   menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+    const isHidden = mobileMenu.classList.contains('hidden');
+
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      setTimeout(() => {
+        mobileMenu.classList.remove('-translate-y-5', 'opacity-0');
+        mobileMenu.classList.add('translate-y-0', 'opacity-100');
+      }, 10);
+    } else {
+      mobileMenu.classList.add('-translate-y-5', 'opacity-0');
+      mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }, 300);
+    }
+
     menuBtn.classList.toggle('open');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-y-5', 'opacity-0');
+    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      mobileMenu.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }, 300);
+    menuBtn.classList.remove('open');
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-y-5', 'opacity-0');
+      mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }, 300);
+      menuBtn.classList.remove('open');
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('-translate-y-5', 'opacity-0');
+      mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
+      menuBtn.classList.remove('open');
+    });
   });
 </script>
 </body>
