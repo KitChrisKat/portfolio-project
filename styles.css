@@ -1,7 +1,7 @@
 .line {
   width: 24px;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transition: all 0.3s ease;
 }
 .open .line1 {
@@ -84,4 +84,17 @@
   100% {
     transform: translateX(-50%);
   }
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+.font-bitter {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
 }
